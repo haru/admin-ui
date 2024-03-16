@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## このコードは
+
+Zenn に投稿した以下の記事のサンプルコードです。
+
+Next.js + MUI で簡単な管理画面テンプレートを作ってみる(その１)
+https://zenn.dev/haru_iida/articles/nextjs_mui_admin
+
 ## Getting Started
 
 First, run the development server:
