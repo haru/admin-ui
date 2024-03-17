@@ -1,17 +1,26 @@
 import {
   Box,
-  Divider,
   Drawer,
+  Link,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
   Toolbar,
 } from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import BeachAccessIcon from "@mui/icons-material/BeachAccess";
+import CoffeeIcon from "@mui/icons-material/Coffee";
 import React from "react";
+
+type MenuItem = {
+  name: string;
+  url: string;
+  icon: React.ReactNode;
+};
+const menuList: MenuItem[] = [
+  { name: "ページ１", url: "/page1", icon: <BeachAccessIcon /> },
+  { name: "ページ２", url: "/page2", icon: <CoffeeIcon /> },
+];
 
 const drawerWidth = 240;
 
@@ -31,26 +40,13 @@ const SideBar = () => {
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem key={text} disablePadding>
+          {menuList.map(({ name, url, icon }: MenuItem) => (
+            <ListItem key={name} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemIcon>{icon}</ListItemIcon>
+                <Link href={url} underline="none" color="inherit">
+                  {name}
+                </Link>
               </ListItemButton>
             </ListItem>
           ))}
