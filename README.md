@@ -7,6 +7,9 @@ Zenn に投稿した以下の記事のサンプルコードです。
 Next.js + MUI で簡単な管理画面テンプレートを作ってみる(その１)
 https://zenn.dev/haru_iida/articles/nextjs_mui_admin
 
+Next.js + MUI で簡単な管理画面テンプレートを作ってみる(その２)
+https://zenn.dev/haru_iida/articles/nextjs_mui_admin2
+
 ## Getting Started
 
 First, run the development server:
